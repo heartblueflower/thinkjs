@@ -11,4 +11,7 @@ export default class extends Base {
     //auto render template file index_index.html
     return this.display();
   }
+    aAction(){
+        return this.success("this is a");
+    }
 }
