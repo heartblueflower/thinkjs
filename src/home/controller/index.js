@@ -12,6 +12,6 @@ export default class extends Base {
     return this.display();
   }
     aAction(){
-        return this.success("this is a");
+        return this.display();
     }
 }
