@@ -2,14 +2,16 @@
 
 import Base from './base.js';
 
-export default class extends think.model.mongo {
+export default class extends Base{
     /**
      * index action
      * @return {Promise} []
      */
     async indexAction(){
-        let model = this.model("user");
-        await model.add({"name":"heyu"});
+        await this.model("user").add({"name":"heyu"});
+        let getuserinfo=await this.session("username");
+        console.log(getuserinfo);
+        let userinfo=await this.session("username","heyu");
         this.success("insert ok");
     }
 }/**
