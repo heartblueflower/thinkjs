@@ -7,9 +7,9 @@ export default class extends think.model.mongo {
      * index action
      * @return {Promise} []
      */
-    indexAction(){
+    async indexAction(){
         let model = this.model("user");
-        model.insert({"name":"heyu"});
+        await model.add({"name":"heyu"});
         this.success("insert ok");
     }
 }/**
